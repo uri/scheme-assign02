@@ -8,19 +8,24 @@
 ;;; TRIPLE
 ; First implementation
 (define (triple aa bb cc)
-  (let ( (x aa)
-         (y bb)
-         (z cc) )
-    
-    (define (dispatch msg)
-      (cond ((eq? msg 'first) x)
-            ((eq? msg 'second) y)
-            ((eq? msg 'third) z)))
+  (define (x-val)
+    aa)
+  
+  (define (y-val)
+    bb)
+  
+  (define (z-val)
+    cc)
+  
+  
+   (define (dispatch . msg)
+      (cond ((eq? (list-find msg 0) 'first) (x-val))
+            ((eq? (list-find msg 0) 'second) (y-val))
+            ((eq? (list-find msg 0) 'third) (z-val))
+            ))
     
     ; Return the dispatch method
-    dispatch
-    
-    ))
+    dispatch)
 
 ;;; First
 (define (first aa)

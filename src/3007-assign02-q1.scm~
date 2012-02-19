@@ -1,9 +1,0 @@
-; Uri Gorelik
-; 100801406
-; Assignment 2
-;;;
-; Question 1
-
-(define add-money (origin slave)
-  ; Put code here
-  )

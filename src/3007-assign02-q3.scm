@@ -4,6 +4,12 @@
 ;;;
 ; Question 3
 
+
+;;; PART B
+; (first a)
+; (a 'first)
+; (x-val)
+; 1
   
 ;;; TRIPLE
 ; First implementation
@@ -95,3 +101,20 @@
   (if (= n 0)
       (car l)
       (list-find (cdr l) (- n 1))))
+
+
+;;; Tests
+
+
+(define a (new-triple 5 6 7))
+(first a)
+(second a)
+(third a)
+
+(set-first! a 88)
+(set-second! a 88)
+(set-third! a 88)
+
+(first a)
+(second a)
+(third a)

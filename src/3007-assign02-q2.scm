@@ -160,11 +160,19 @@
 ;;;;;;; TESTING
 
 (define m1 (new-movie '(Die Hard) 1890 (new-cast '(Uri Gorelik) '(Garry Whoa))))
-(define m2 (new-movie '(Donnie Darko) 2001 (new-cast '(Jake Ghellaienhal) '(His Sister))))
+(define m2 (new-movie '(Donnie Darko) 2001 (new-cast '(Jake Gyllenhaal) '(His Sister))))
+(define m3 (new-movie '(Matrix) 2001 (new-cast '(uri gorelik) '(Keanu Reeves) '(Trinity))))
 (define mq (list m1))
 
-
 (add-movie m2 mq)
+(add-movie m3 mq)
+
+
+(list-movies '(uri gorelik) mq)
+(list-movies '(not in the list) mq)
+(list-movies '(keanu reeves) mq)
+
+
 
 
 ;; Try deleting the first movie
